@@ -23,7 +23,7 @@ const Customer = () => {
             // onClick={() => setShowToolTip(!showToolTip)}
           />
 
-          {showToolTip && (
+          {!showToolTip && (
             <img
               src={images.toolTip}
               className="absolute bottom-[32%] left-[66px] lg:bottom-[110px] lg:left-[170px] md:bottom-[30%] md:left-[168px] w-15 h-15"
