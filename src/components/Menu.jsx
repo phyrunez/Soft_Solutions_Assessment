@@ -18,7 +18,7 @@ const Menu = () => {
 
       <hr className="border-t -mt-6 border-gray-200" />
 
-      <div className="grid grid-cols-[70%_30%] gap-2 mt-3 mx-auto w-[95%]">
+      <div className="grid grid-cols-1 lg:grid lg:grid-cols-[70%_30%] md:grid md:grid-cols-[70%_30%] gap-2 mt-3 mx-auto w-[95%]">
         <div className="relative rounded-md">
           <img src={images.Menu_1} className="w-full rounded-md h-[230px]" />
           <div className="absolute bottom-0 ml-3 backdrop-blur-sm justify-center w-[97%] border border-none mb-4 rounded-md p-4 bg-white bg-opacity-50 items-center mx-auto">
@@ -35,7 +35,7 @@ const Menu = () => {
         </div>
         <div className="relative rounded-md">
           <img src={images.Menu_2} className="w-full rounded-md h-full" />
-          <div className="absolute bottom-0 backdrop-blur-sm justify-center w-[90%] border border-none mb-4 rounded-md p-4 bg-white bg-opacity-50 items-center mx-auto">
+          <div className="absolute bottom-0 backdrop-blur-sm justify-center lg:w-[92%] md:w-[92%] w-[96%] border ml-3 border-none mb-4 rounded-md p-4 bg-white bg-opacity-50 items-center mx-auto">
             <div className="flex flex-row justify-between z-10">
               <div>
                 <h3 className="text-sm font-bold">Shaking Beef Tri-Tip</h3>
@@ -49,7 +49,7 @@ const Menu = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-5 mt-3 mb-6 mx-auto ml-8 w-[101%]">
+      <div className="grid grid-cols-2 lg:grid lg:grid-cols-4 md:grid md:grid-cols-2 gap-5 lg:mt-3 md:mt-3 mt-10 mb-6 mx-auto lg:ml-8 md:ml-8 ml-5 w-[101%]">
         {MenuData.map((menu) => {
           return (
             <div className="relative rounded-md" id={menu.id}>

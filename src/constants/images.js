@@ -41,6 +41,7 @@ import carbonView from "../assets/carbon_view-filled.png";
 import bxExport from "../assets/bx_bx-export.png";
 import featherIcon from "../assets/feather_trash-2.png";
 import mapMarker from "../assets/mapMarker.png";
+import toolTip from "../assets/Tooltip.png";
 
 const images = {
   customerImage_1,
@@ -86,6 +87,7 @@ const images = {
   featherIcon,
   bxExport,
   mapMarker,
+  toolTip,
 };
 
 export default images;

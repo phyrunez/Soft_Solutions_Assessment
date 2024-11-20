@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { images } from "../constants";
 import { CustomerListData } from "../data";
 
 const Customer = () => {
+  const [showToolTip, setShowToolTip] = useState(false);
+
   return (
-    <div className="grid grid-cols-[75%_24%] my-5 gap-2 w-[97%] mx-auto">
+    <div className="grid grid-cols-1 lg:grid lg:grid-cols-[75%_24%] md:grid md:grid-cols-1 my-5 gap-2 md:gap-4 w-[97%] mx-auto">
       <div className="rounded-md shadow-lg overflow-hidden bg-white">
         <div className="py-6 px-10">
           <h3 className="font-bold pb-4">Customer Map</h3>
@@ -16,16 +19,24 @@ const Customer = () => {
 
           <img
             src={images.mapMarker}
-            className="absolute z-10 top-[40px] right-[140px] w-6 h-6 cursor-pointer"
+            className="absolute z-10 lg:top-[10%] lg:right-[140px] top-[20px] right-[50px] md:top-[40px] md:right-[150px] w-6 h-6 cursor-pointer"
+            // onClick={() => setShowToolTip(!showToolTip)}
           />
 
-          <div class="absolute bottom-[130px] left-[180px] mb-2 px-2 py-1 bg-gray-800 text-white text-sm rounded-md">
+          {showToolTip && (
+            <img
+              src={images.toolTip}
+              className="absolute bottom-[32%] left-[66px] lg:bottom-[110px] lg:left-[170px] md:bottom-[30%] md:left-[168px] w-15 h-15"
+            />
+          )}
+
+          {/* <div class="absolute bottom-[130px] left-[180px] mb-2 px-2 py-1 bg-gray-800 text-white text-sm rounded-md">
             This is a tooltip
-          </div>
+          </div> */}
 
           <img
             src={images.mapMarker}
-            className="absolute z-10 top-[60px] left-[247px] w-6 h-6 cursor-pointer"
+            className="absolute z-10 top-[15%] left-[247px] w-6 h-6 cursor-pointer"
           />
 
           <img
@@ -60,7 +71,8 @@ const Customer = () => {
 
           <img
             src={images.mapMarker}
-            className="absolute z-10 bottom-[113px] left-[226px] w-6 h-6 cursor-pointer"
+            className="absolute z-10 lg:bottom-[30%] lg:left-[226px] md:bottom-[30%] md:left-[226px] bottom-[28%] left-[126px] w-6 h-6 cursor-pointer"
+            onClick={() => setShowToolTip(!showToolTip)}
           />
         </div>
       </div>

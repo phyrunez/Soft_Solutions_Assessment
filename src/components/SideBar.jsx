@@ -3,8 +3,8 @@ import { sidebarData } from "../data";
 
 const SideBar = () => {
   return (
-    <div className="flex flex-col bg-[#FFFFFF] w-[20%] h-[980px] justify-center">
-      <div className="mx-auto py-5">
+    <div className="lg:flex lg:flex-col bg-[#FFFFFF] hidden md:hidden w-[20%] h-[980px] justify-center">
+      <div className="lg:mx-auto py-5">
         <img src={images.Logo} alt="Logo" />
 
         <div className="flex flex-col gap-5 mt-24">
